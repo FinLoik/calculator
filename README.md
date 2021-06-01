@@ -1,8 +1,12 @@
 "# calculator-mom" 
 
 
-
-git commit -m "first commit"
+git add .
+git commit -m "1."
 git branch -M main
-git remote add origin https://github.com/FinLoik/example.git
 git push -u origin main
+
+
+1.2 
+
+Fixed - auto-invsee

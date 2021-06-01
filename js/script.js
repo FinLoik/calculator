@@ -19,7 +19,7 @@ document.getElementById("auto")
         }, c = this.value,
             a;
         for (a in b) document.getElementById(b[a])
-            .style.display = 0 == c || c == a ? "block" : "none"
+            .style.display = 0 == c || c == a ? "none" : "block"
 };
 
 
