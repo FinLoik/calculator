@@ -98,17 +98,22 @@ function sumcalc() {
 	var height = $('#height').val();
 	var weight = $('#weight').val();
 
+	// var height_weight = height + weight - 5000;
+
 	var paint = $('#paint-kark').val();
 	var obshifka = $('#obshifka').val();
 	var Kalitka_v_var = $('#Kalitka_v_var').val();
 	var setup_var = $('#setup_var').val();
 
 	var fundamnt = $('#fundamnt-var').val();
-	var weight = $('#weight').val();
-	var weight = $('#weight').val();
+	var auto = $('#auto').val();
+	var setup = $('#setup-auto').val();
 
 
-	var sum = (weight * height) - paint;
-	console.log(sum);
+//  paint + obshifka + Kalitka_v_var + setup_var + fundamnt + auto + setup;
+	var sum = (height + weight) + paint;
+	
+
+	$('.sum-calc').text(sum)
 
 }

@@ -10,3 +10,8 @@ git push -u origin main
 1.2 
 
 Fixed - auto-invsee
+
+
+1.3 
+
+++ Is rong
