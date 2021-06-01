@@ -29,9 +29,10 @@ body {
     margin-bottom: 10px;
 }
 
-.box h3 {
+.box label {
     color: #e5e4e2;
-    font-size: 20px;
+    font-size: 19px;
+    font-weight: 600;
 
 }
 
@@ -105,19 +106,20 @@ body {
 }
 
 
-.box-2 h3 {
+.box-2 label {
     color: #e5e4e2;
-    font-size: 20px;
+    font-size: 19px;
+    font-weight: 600;
 
 }
 
 @media(max-width:767px){
 
-    .box-2 h3 {
+    .box-2 label {
         font-size: 16px;
     }
 
-    .box h3 {
+    .box label {
         font-size: 16px;
     }
 

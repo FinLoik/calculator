@@ -1,6 +1,6 @@
 $(".js-range-slider").ionRangeSlider({
     type: "single",
-    min: 1000,
+    min: 0,
     max: 6000,
     step: 50,
     grid: true,
@@ -87,3 +87,28 @@ $(function() {
 
 
 
+// calculator
+
+$('#setup-auto,#auto,#fundamnt-var,#setup_var,#obshifka, #paint-kark, #weight, #height, #Kalitka_v_var').on('change', function() {
+	sumcalc();
+
+});
+
+function sumcalc() {
+	var height = $('#height').val();
+	var weight = $('#weight').val();
+
+	var paint = $('#paint-kark').val();
+	var obshifka = $('#obshifka').val();
+	var Kalitka_v_var = $('#Kalitka_v_var').val();
+	var setup_var = $('#setup_var').val();
+
+	var fundamnt = $('#fundamnt-var').val();
+	var weight = $('#weight').val();
+	var weight = $('#weight').val();
+
+
+	var sum = (weight * height) - paint;
+	console.log(sum);
+
+}

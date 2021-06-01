@@ -28,48 +28,48 @@
     <div class="box">
 
         <div class="section">
-            <h3>Выберите ширину, мм:</h3>
-            <input id="slider" type="text" class="js-range-slider" name="my_range" value="" />
+            <label for="weight">Выберите ширину, мм:</label>
+            <input id="weight" type="text" class="js-range-slider" name="my_range" value="" />
         </div>
 
         <div class="section">
-            <h3>Выберите высоту, мм:</h3>
-            <input id="slider" type="text" class="js-range-slider" name="my_range" value="" />
+            <label for="height">Выберите высоту, мм:</label>
+            <input id="height" type="text" class="js-range-slider" name="my_range" value="" />
             <div class="inveese"></div>
         </div>
 
         <div class="section-un">
             <div class="duo">
-                <h3>Покраска каркаса</h3>
-                <select name="select-karkas" id="">
-                    <option value="no">Нет</option>
-                    <option value="yes">Да</option>
+                <label for="paint-kark">Покраска каркаса</label>
+                <select name="select-karkas" id="paint-kark">
+                    <option value="0" >Нет</option>
+                    <option value="5000" >Да</option>
                 </select>
             </div>
             
             <div class="duo">
-                <h3>Тип обшивки: Профлист</h3>
-                <select name="" id="">
-                    <option value="">Нет</option>
-                    <option value="">Да</option>
+                <label for="obshifka">Тип обшивки: Профлист</label>
+                <select name="" id="obshifka">
+                    <option value="0">Нет</option>
+                    <option value="9800">Да</option>
                 </select>
             </div>
         </div>
 
         <div class="section-un">
             <div class="duo">
-                <h3>Калитка в воротах</h3>
-                <select name="" id="">
-                    <option value="">Нет</option>
-                    <option value="">Да</option>
+                <label for="Kalitka_v_var" >Калитка в воротах</label>
+                <select name="" id="Kalitka_v_var">
+                    <option value="0">Нет</option>
+                    <option value="4390">Да</option>
                 </select>
             </div>
             
             <div class="duo">
-                <h3>Установка ворот</h3>
-                <select name="" id="">
-                    <option value="">Нет</option>
-                    <option value="">Да</option>
+                <label for="setup_var">Установка ворот</label>
+                <select name="" id="setup_var">
+                    <option value="0">Нет</option>
+                    <option value="2390">Да</option>
                 </select>
             </div>
         </div>
@@ -85,26 +85,26 @@
 
         <div class="section-un">
             <div class="duo">
-                <h3>Фундамент для ворот</h3>
-                <select name="select-karkas" id="">
-                    <option value="no">Нет</option>
-                    <option value="yes">Да</option>
+                <label for="fundamnt-var">Фундамент для ворот</label>
+                <select name="" id="fundamnt-var">
+                    <option value="0">Нет</option>
+                    <option value="6902">Да</option>
                 </select>
             </div>
             
             <div class="duo choose">
-                <h3>Автоматика</h3>
+                <label for="auto">Автоматика</label>
                 <select name="auto" id="auto">
-                    <option value="no">Нет</option>
-                    <option value="yes">Да</option>
+                    <option value="0">Нет</option>
+                    <option value="12902" id="yes">Да</option>
                 </select>
             </div>
 
             <div class="duo special" id="invsee">
-                <h3>Установка автоматики</h3>
+                <label for="setup-auto">Установка автоматики</label>
                 <select name="setup-auto" id="setup-auto">
-                    <option value="no">Нет</option>
-                    <option value="yes">Да</option>
+                    <option value="0">Нет</option>
+                    <option value="5928">Да</option>
                 </select>
             </div>
         </div>
@@ -168,7 +168,7 @@
             </table>
 
             <div class="last">
-                <a href="#">Итого:</a> <h3 id="last-cost">329.294rub</h3>
+                <a href="#">Итого:</a> <h3 class="sum-calc">329.294rub</h3>
 
             </div>
         </div>
