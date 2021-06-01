@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-up {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+body {
+    margin-bottom: 10px;
+    background:gainsboro;
+}
+
+.box {
+    background-color: #080a16;
+    height: auto;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    max-width: 1000px;
+    padding: 25px;
+    margin-bottom: 10px;
+}
+
+.box h3 {
+    color: #e5e4e2;
+    font-size: 20px;
+
+}
+
+.box h2 {
+    color: #e5e4e2;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.box .inveese {
+    margin-bottom: 25px;
+}
+
+
+.section-un {
+    width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    justify-content: space-between;
+    margin-top: 10px;
+    grid-gap: 20px;
+}
+
+/* selector */
+
+.box select {
+    background-color: black;
+    border: solid #F43336 1px;
+    border-radius: 5px;
+    width: 80%;
+    height: 25px;
+    color: white;
+    font-size: 17px;
+    transition: 0.3s ease;
+    font-weight: 510;
+    margin-top: 3px;
+}
+
+.box select:hover {
+    background-color:rgb(26, 23, 23) ;
+    transition: 0.3s ease;
+}
+
+/* second */
+
+.box-2 {
+    background-color: #080a16;
+    height: auto;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    padding: 25px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.text-t {
+    color: white;
+    font-weight: 500;
+    background-color: #F43336;
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    max-width: 1000px;
+
+}
+
+
+.box-2 h3 {
+    color: #e5e4e2;
+    font-size: 20px;
+
+}
+
+@media(max-width:767px){
+
+    .box-2 h3 {
+        font-size: 16px;
+    }
+
+    .box h3 {
+        font-size: 16px;
+    }
+
+    .box-2 select {
+        font-size: 15px;
+    }
+
+    .box select {
+        font-size: 15px;
+    }
+
+}
+
+.box-2 h2 {
+    color: #e5e4e2;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.box-2 .inveese {
+    margin-bottom: 25px;
+}
+
+.box-2 select {
+    background-color: black;
+    border: solid #F43336 1px;
+    border-radius: 5px;
+    width: 80%;
+    height: 25px;
+    color: white;
+    font-size: 17px;
+    transition: 0.3s ease;
+    font-weight: 510;
+    margin-top: 3px;
+}
+
+.box-2 select:hover {
+    background-color:rgb(26, 23, 23) ;
+    transition: 0.3s ease;
+}
+
+/* setting inveese  */
+
+#invsee {
+    display: none;
+}
+
+
+
+
+/* result */
+
+.result {
+    margin-top: 15px;
+}
+
+.box table tr {
+    color: white;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}  
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+.last {
+    color: white;
+    font-weight: 600;
+    background-color: #F43336;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    border-radius: 3px;
+    height: 50px;
+    width: 100%;
+	grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    justify-content: space-between;
+    margin-top: 10px;
+    grid-gap: 20px;
+    display:flex;
+}
+
+.last a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* btn */
+
+.btn-main {
+    text-align: center;
+}
+
+.button-calc {
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    border: 2px solid #F43336;
+    border-radius: 3px;
+    margin: 20px 20px 20px 20px;
+    color: #BFC0C0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+.button-calc a {
+ 
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+}
+
+#button-3 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  #button-3 a {
+    position: relative;
+    transition: all .45s ease-Out;
+  }
+  
+  #circle {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    background:#F43336;
+    position: absolute;
+    transition: all .5s ease-Out;
+    top: 20px;
+    left: 70px;
+  }
+  
+  #button-3:hover #circle {
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+    top: -70px;
+    left: -70px;
+  }
+  
+  #button-3:hover a {
+    color: white;
+}
+
+#result {
+    display: none;
+}
