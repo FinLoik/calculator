@@ -81,6 +81,11 @@ $(function() {
       clickEvent.preventDefault();
    
       $("#result").css("display", "block");
+	
+		//scroll theme
+	  $([document.documentElement, document.body]).animate({
+			scrollTop: $("#btn_main").offset().top
+	  }, 1500);
 
     });
   });
@@ -89,7 +94,7 @@ $(function() {
 
 // calculator
 
-$('#setup-auto,#auto,#fundamnt-var,#setup_var,#obshifka, #paint-kark, #weight, #height, #Kalitka_v_var').on('change', function() {
+$('#cost-one,#setup-auto,#auto,#fundamnt-var,#setup_var,#obshifka, #paint-kark, #weight, #height, #Kalitka_v_var').on('change', function() {
 	sumcalc();
 
 });
@@ -104,6 +109,7 @@ function sumcalc() {
 	var obshifka = $('#obshifka').val();
 	var Kalitka_v_var = $('#Kalitka_v_var').val();
 	var setup_var = $('#setup_var').val();
+
 
 	var fundamnt = $('#fundamnt-var').val();
 	var auto = $('#auto').val();
