@@ -24,6 +24,7 @@ document.getElementById("auto")
 
 
 
+
 // btn 
 $(document).ready(function() {
 	
@@ -84,7 +85,7 @@ $(function() {
 	
 		//scroll theme
 	  $([document.documentElement, document.body]).animate({
-			scrollTop: $("#btn_main").offset().top
+			scrollTop: $("#result").offset().top
 	  }, 1500);
 
     });
@@ -94,32 +95,52 @@ $(function() {
 
 // calculator
 
-$('#cost-one,#setup-auto,#auto,#fundamnt-var,#setup_var,#obshifka, #paint-kark, #weight, #height, #Kalitka_v_var').on('change', function() {
+$('#setup-auto,#auto,#fundamnt-var,#setup_var,#obshifka, #paint-kark, #weight, #height, #Kalitka_v_var').on('change', function() {
 	sumcalc();
-
 });
+
 
 function sumcalc() {
 	var height = $('#height').val();
 	var weight = $('#weight').val();
 
-	// var height_weight = height + weight - 5000;
 
+	var heightInt = Number.parseInt(height);
+	var weightInt = Number.parseInt(weight);
+	//-------------------------------
 	var paint = $('#paint-kark').val();
 	var obshifka = $('#obshifka').val();
 	var Kalitka_v_var = $('#Kalitka_v_var').val();
 	var setup_var = $('#setup_var').val();
 
-
 	var fundamnt = $('#fundamnt-var').val();
 	var auto = $('#auto').val();
 	var setup = $('#setup-auto').val();
 
+	//------------------------------------
+	var paintInt = Number.parseInt(paint);
+	var obshifkaInt = Number.parseInt(obshifka);
+	var Kalitka_v_varInt = Number.parseInt(Kalitka_v_var);
+	var setup_varInt = Number.parseInt(setup_var);
 
-//  paint + obshifka + Kalitka_v_var + setup_var + fundamnt + auto + setup;
-	var sum = (height + weight) + paint;
+	var fundamntInt = Number.parseInt(fundamnt);
+	var autoInt = Number.parseInt(auto);
+	var setupInt = Number.parseInt(setup);
+
+
 	
+	//formuls---------------
 
-	$('.sum-calc').text(sum)
+	var karkas = weightInt + heightInt + paintInt + Kalitka_v_varInt + obshifkaInt;
+	
+	var result = karkas + fundamntInt + autoInt + setup_varInt + setupInt;
 
+
+	$('#cost_one').text(karkas);
+	$('#cost_two').text(fundamntInt);
+	$('#cost_three').text(autoInt);
+	$('#cost_four').text(setup_varInt);
+	$('#cost_five').text(setupInt);
+	$('#cost_six').text(setup-autoInt);
+	$('#sum_end').text(result);
 }
