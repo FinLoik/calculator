@@ -1,28 +1,16 @@
-"# calculator-mom" 
-
+"# calculator" 
 
 git add .
 git commit -m "1."
 git push -u origin main
 
 
-1.2 
-
-Fixed - auto-invsee
 
 
-1.3 
+Что нужно сохранить при переносе калькулятора!
 
-++ Is rong
+1. Привязку кода index.html к script.js / main.css и iosrange // 12 строка html
+В общем нужно сохранить содержимое папок CSS, JS и INDEX.HTML
+2. В main.css c 1-6 строчек кода убрать при возможности.
 
-1.4 
 
-scroll to result
-
-1.5 
-
-result full rab 
-
-What I need to add 
-1) unprefix - RUB
-2) fix choose -> table fix
