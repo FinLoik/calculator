@@ -7,16 +7,21 @@
 
 .text-up {
     text-align: center;
+    padding: 10px;
     margin-top: 50px;
     margin-bottom: 25px;
 }
 
-body {
+.text-up h1 {
     margin-bottom: 10px;
+}
+
+body {
+    margin-bottom: px;
     background:gainsboro;
 }
 
-.box {
+.box-calc {
     background-color: #080a16;
     height: auto;
     width: 70%;
@@ -29,20 +34,20 @@ body {
     margin-bottom: 10px;
 }
 
-.box label {
+.box-calc label {
     color: #e5e4e2;
     font-size: 19px;
     font-weight: 600;
 
 }
 
-.box h2 {
+.box-calc h2 {
     color: #e5e4e2;
     text-align: center;
     margin-bottom: 15px;
 }
 
-.box .inveese {
+.box-calc .inveese {
     margin-bottom: 25px;
 }
 
@@ -58,7 +63,7 @@ body {
 
 /* selector */
 
-.box select {
+.box-calc select {
     background-color: black;
     border: solid #F43336 1px;
     border-radius: 5px;
@@ -71,7 +76,7 @@ body {
     margin-top: 3px;
 }
 
-.box select:hover {
+.box-calc select:hover {
     background-color:rgb(26, 23, 23) ;
     transition: 0.3s ease;
 }
@@ -105,21 +110,35 @@ body {
 
 }
 
+/* text-t - s9 note 8 s8 settings */
+@media(max-width:360px){
+    #sum_end:after { display: none; }
+}
+
 
 .box-2 label {
     color: #e5e4e2;
     font-size: 19px;
     font-weight: 600;
-
 }
 
 @media(max-width:767px){
 
+
+    
+    .text-up h1 {
+        font-size: 26px;
+    }
+
+    .text-t {
+        font-size: 14px;
+
+    }
     .box-2 label {
         font-size: 16px;
     }
 
-    .box label {
+    .box-calc label {
         font-size: 16px;
     }
 
@@ -127,7 +146,7 @@ body {
         font-size: 15px;
     }
 
-    .box select {
+    .box-calc select {
         font-size: 15px;
     }
 
@@ -174,9 +193,10 @@ body {
 
 .result {
     margin-top: 15px;
+
 }
 
-.box table tr {
+.box-calc table tr {
     color: white;
 }
 
@@ -322,34 +342,21 @@ table th {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-  }
+    transition: 0.2s ease;
+}
+
+#button-3:hover {
+    background: #F43336;
+    transition: 0.4s ease;
+}
   
   #button-3 a {
     position: relative;
     transition: all .45s ease-Out;
   }
   
-  #circle {
-    width: 0%;
-    height: 0%;
-    opacity: 0;
-    line-height: 40px;
-    border-radius: 50%;
-    background:#F43336;
-    position: absolute;
-    transition: all .5s ease-Out;
-    top: 20px;
-    left: 70px;
-  }
-  
-  #button-3:hover #circle {
-    width: 200%;
-    height: 500%;
-    opacity: 1;
-    top: -70px;
-    left: -70px;
-  }
-  
+
+
   #button-3:hover a {
     color: white;
 }
@@ -365,3 +372,9 @@ table th {
 
 /* result all ivsee */
 
+#sum_end:after { content:' руб.'; }
+#cost_one:after { content:' руб.'; }
+#cost_two:after { content:' руб.'; }
+#cost_three:after { content:' руб.'; }
+#cost_four:after { content:' руб.'; }
+#cost_five:after { content:' руб.'; }

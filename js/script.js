@@ -11,6 +11,20 @@ $(".js-range-slider").ionRangeSlider({
     postfix: " мм",
 });
 
+$(".js_range_slider").ionRangeSlider({
+    type: "single",
+    min: 0,
+    max: 2400,
+    step: 50,
+    grid: true,
+    keyboard: true,
+    grid_num: 6,
+    skin: "round",
+    skin_color: "#E2001A",
+    postfix: " мм",
+});
+
+
 // automatika choose
 document.getElementById("auto")
     .onchange = function () {
@@ -131,16 +145,197 @@ function sumcalc() {
 	
 	//formuls---------------
 
-	var karkas = weightInt + heightInt + paintInt + Kalitka_v_varInt + obshifkaInt;
+
 	
+	
+
+	var result_kub;
+
+	if (weightInt <= 4250 & heightInt <= 1500) {
+		result_kub = 48000;
+	}
+	 
+	if (weightInt <= 4250 & heightInt > 1500 & heightInt <= 1800) {
+		result_kub = 49200;
+	}
+
+	if (weightInt <= 4250 & heightInt > 1800 & heightInt <= 2000) {
+		result_kub = 50400;
+	}
+
+	if (weightInt <= 4250 & heightInt > 2000 & heightInt <= 2200) {
+		result_kub = 51600;
+	}
+
+	if (weightInt <= 4250 & heightInt > 2200 & heightInt <= 2400) {
+		result_kub = 52800;
+	}
+	
+	if (weightInt > 4250 & weightInt <= 6000 & heightInt <= 1500) {
+		result_kub = 64000;
+	}
+
+	if (weightInt > 4250 & weightInt <= 6000 & heightInt > 1500 & heightInt <= 1800) {
+		result_kub = 66500;
+	}
+
+	if (weightInt > 4250 & weightInt <= 6000 & heightInt > 1800 & heightInt <= 2000) {
+		result_kub = 69000;
+	}
+
+	if (weightInt > 4250 & weightInt <= 6000 & heightInt > 2000 & heightInt <= 2200) {
+		result_kub = 71500;
+	}
+
+	if (weightInt > 4250 & weightInt <= 6000 & heightInt > 2200 & heightInt <= 2400) {
+		result_kub = 75000;
+	}
+
+	if (weightInt == 0 & heightInt == 0) {
+		result_kub = 0;
+	}
+
+	if (obshifkaInt >= 1) {
+		var dmetr = 1000; //rub
+		var metr_cc = (weightInt * heightInt) / 1000000; // kvadrat metr
+		obshifkaInt = (metr_cc * dmetr)
+	}
+	
+
+	var karkas =  result_kub + paintInt + Kalitka_v_varInt + obshifkaInt;
 	var result = karkas + fundamntInt + autoInt + setup_varInt + setupInt;
 
 
-	$('#cost_one').text(karkas);
+	// animation
+	$({countNum: $('#cost_one').text()}).animate ({
+		countNum: karkas
+	},
+	{
+		duration: 500,
+		easing: 'swing',
+		step: function() {
+			$('#cost_one').text(Math.floor(this.countNum));
+		},
+		complete: function() {
+			$('#cost_one').text(this.countNum);
+		}
+	}
+	);
+
+
+
+	$({countNum: $('#cost_two').text()}).animate ({
+		countNum: fundamntInt
+	},
+	{
+		duration: 500,
+		easing: 'swing',
+		step: function() {
+			$('#cost_two').text(Math.floor(this.countNum));
+		},
+		complete: function() {
+			$('#cost_two').text(this.countNum);
+		}
+	}
+	);
+
+	$({countNum: $('#cost_three').text()}).animate ({
+		countNum: autoInt
+	},
+	{
+		duration: 500,
+		easing: 'swing',
+		step: function() {
+			$('#cost_three').text(Math.floor(this.countNum));
+		},
+		complete: function() {
+			$('#cost_three').text(this.countNum);
+		}
+	}
+	);
+
+	$({countNum: $('#cost_four').text()}).animate ({
+		countNum: setup_varInt
+	},
+	{
+		duration: 500,
+		easing: 'swing',
+		step: function() {
+			$('#cost_four').text(Math.floor(this.countNum));
+		},
+		complete: function() {
+			$('#cost_four').text(this.countNum);
+		}
+	}
+	);
+
+	$({countNum: $('#cost_five').text()}).animate ({
+		countNum: setupInt
+	},
+	{
+		duration: 500,
+		easing: 'swing',
+		step: function() {
+			$('#cost_five').text(Math.floor(this.countNum));
+		},
+		complete: function() {
+			$('#cost_five').text(this.countNum);
+		}
+	}
+	);
+
+	$({countNum: $('#sum_end').text()}).animate ({
+		countNum: result
+	},
+	{
+		duration: 500,
+		easing: 'swing',
+		step: function() {
+			$('#sum_end').text(Math.floor(this.countNum));
+		},
+		complete: function() {
+			$('#sum_end').text(this.countNum);
+		}
+	}
+	);
+
+	
+
+	//$('#cost_one').text(karkas);
 	$('#cost_two').text(fundamntInt);
 	$('#cost_three').text(autoInt);
 	$('#cost_four').text(setup_varInt);
 	$('#cost_five').text(setupInt);
 	$('#cost_six').text(setup-autoInt);
-	$('#sum_end').text(result);
+	//$('#sum_end').text(result);
 }
+
+
+ 
+    /* функция добавления ведущих нулей */
+    /* (если число меньше десяти, перед числом добавляем ноль) */
+    function zero_first_format(value)
+    {
+        if (value < 10)
+        {
+            value='0'+value;
+        }
+        return value;
+    }
+
+    /* функция получения текущей даты и времени */
+    function date_time()
+    {
+        var current_datetime = new Date();
+        var day = zero_first_format(current_datetime.getDate());
+        var month = zero_first_format(current_datetime.getMonth()+1);
+        var year = current_datetime.getFullYear();
+        return day+"/"+month+"/"+year;
+    }
+
+    /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
+    document.getElementById('data-calc').innerHTML = date_time();
+	document.getElementById('data-calc-2').innerHTML = date_time();
+	document.getElementById('data-calc-3').innerHTML = date_time();
+	document.getElementById('data-calc-4').innerHTML = date_time();
+	document.getElementById('data-calc-5').innerHTML = date_time();
