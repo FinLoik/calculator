@@ -1,11 +1,12 @@
 $(".js-range-slider").ionRangeSlider({
     type: "single",
-    min: 0,
+    min: 1200,
     max: 6000,
     step: 50,
     grid: true,
     keyboard: true,
-    grid_num: 5,
+    grid_num: 12,
+	grid_margin: true,
     skin: "round",
     skin_color: "#E2001A",
     postfix: " мм",
@@ -13,13 +14,14 @@ $(".js-range-slider").ionRangeSlider({
 
 $(".js_range_slider").ionRangeSlider({
     type: "single",
-    min: 0,
-    max: 2400,
+    min: 1000,
+    max: 3000,
     step: 50,
     grid: true,
     keyboard: true,
-    grid_num: 6,
+    grid_num: 10,
     skin: "round",
+	grid_margin: true,
     skin_color: "#E2001A",
     postfix: " мм",
 });
